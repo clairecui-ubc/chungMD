@@ -52,7 +52,7 @@ Among the 21 fields of RBSC dataset and 34 fields of DI, 20 of them are shared b
 ## Goals
 The goal of the project is to have a full list of current collections available for import into AtoM, the new metadata management system. This list should meet the following requirements by the end of the project:
 * The format of the data should comply with the current Canadian Rules of Description
-*	The list should include all collections that have been described or received in the Chung Collection, though gaps may still exist for missing items
+* The list should include all collections that have been described or received in the Chung Collection, though gaps may still exist for missing items
 * The list need to ensure that all description information for the items are correct, including
   * No discrepancy between RBSC and DI dataset on fields to import to AtoM (Access Identifier, Title, Alternative Title, Location, Notes, Creator, Description, Date Created, Date Issued, Language, Physical Description)
   * Locations are correctly assigned for existing items, which means all items should be assigned a location. If the item is found missing, the location field should be indicated as “missing”, while the original location should be recorded in “Staff_Notes” field.
@@ -142,6 +142,27 @@ With the cleaned list, I used python programming to replace the updated list, wh
 * No duplicated identifiers
 * Identified skipped locations
 * Identified skipped identifiers of artifacts (CC-AR), photos (CC-PH, not include photo albums), CC-GR and CC-OS.
+
+### Collection Arrangement
+* Collection: Chung Collection
+  * Series: Immigration and Settlement
+    * Subseries: Chinese immigration and settlement to Canada (Chung Categories: “The Asian Experience in North America” and “Images of Chinese People and Communities in North America”)
+    * Subseries: The Yip Family and Yip Sang Company
+    * Subseries: Chinese Freemasons (Cheekungtong)
+    * Subseries: Clandonald and Scottish immigration to Canada
+  * Series: Early British Columbia and Canadian History 
+    * Subseries: Early British Columbia History (Chung Category: British Columbia historical documents, photographs and artifacts)
+    * Subseries: Early Canadian History
+  * Series: Canadian Pacific Railway Company
+    * Subseries: Canadian Pacific Railway
+    * Subseries: C.P.R. steamships
+    * Subseries: Travel and Tourism with the C.P.R.
+    * Subseries: British Columbia Coast Steamship Service
+    * Subseries: Artwork and images of the C.P.R.
+    * Subseries: C.P.R. artefacts
+    * Subseries: Working for the C.P.R.
+    * Subseries: Esquimalt and Nanaimo Railway Company
+  * Series: Canadian transportation
 
 ### Major tasks finished
 - [x] A full list of metadata available: RBSC+DI
