@@ -5,7 +5,16 @@
 * [Goals](#goals)
 * [Major Tasks](#major-tasks)
 * [Methods](#methods)
-  * [Merge RBSC, DI and EX datasets]()
+  - [ ] [Merge RBSC, DI and EX datasets](#merge-rbsc-di-and-ex-datasets)
+  - [ ] [Remove Duplicates](#remove-duplicates)
+  - [ ] [Check mismatched RBSC and DI columns](#check-mismatched-rbsc-and-di-columns)
+  - [ ] [Identify possible gaps](#identify-possible-gaps)
+  - [ ] [Check Data Integrity](#check-data-integrity)
+  - [ ] [Creators Cleaning](##creators-cleaning)
+* [Outcomes](#outcomes)
+* [Range of Access Identifiers](#range-of-access-identifiers)
+* [Appendix](#appendix)
+
 ## Background
 UBC Rare Books and Special Collections (RBSC), UBC Library is working with Digital Initiatives at UBC library to decommission the current Chung database and move information to a complete system of record (AtoM software). The Chung collection is a major asset to UBC, and holds over 25, 000 items that document immigration and settlement to British Columbia, the Canadian Pacific Railway, and early exploration.  The collection is particularly rich in its documentation of the Canadian-Chinese diaspora.   RBSC is working with Digital Initiatives (DI) at UBC library to decommission the current Chung database and move information to a complete system of record (AtoM software). 
 Introduction on the dataset
@@ -135,18 +144,18 @@ With the cleaned list, I used python programming to replace the updated list, wh
 * Identified skipped identifiers of artifacts (CC-AR), photos (CC-PH, not include photo albums), CC-GR and CC-OS.
 
 ### Major tasks finished
-* A full list of metadata available: RBSC+DI
-* Update identifiers: EX identifiers
-* Duplicates removed:
-* Library items removed: 
-* RBSC and DI discrepancies checked: Title, Location, Date, Description, Notes, Physical description
-* Album/photo links established using parentID field.
-* Assign unique categories for all records
-* Add skipped identifiers
-* Creators Cleaning:  unify different forms of creators; match with AtoM authority list (except for CPR related creators)
-* Add new columns and fill in information: GMD, level of description, start date and end date, language_CSV
-* Add columns to mark changes: Status, Notes_Merging_CC, RBSC_Staff_Notes
-* Keep logs: master daily backup, Updates Log, Co-op work log
+- [x] A full list of metadata available: RBSC+DI
+- [x] Update identifiers: EX identifiers
+- [x] Duplicates removed:
+- [x] Library items removed: 
+- [x] RBSC and DI discrepancies checked: Title, Location, Date, Description, Notes, Physical description
+- [x] Album/photo links established using parentID field.
+- [x] Assign unique categories for all records
+- [x] Add skipped identifiers
+- [x] Creators Cleaning:  unify different forms of creators; match with AtoM authority list (except for CPR related creators)
+- [x] Add new columns and fill in information: GMD, level of description, start date and end date, language_CSV
+- [x] Add columns to mark changes: Status, Notes_Merging_CC, RBSC_Staff_Notes
+- [x] Keep logs: master daily backup, Updates Log, Co-op work log
 
 ## Range of Access Identifiers
 * Artefacts: CC-AR-00001~CC-AR-00787
