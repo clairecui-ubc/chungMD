@@ -1,4 +1,4 @@
-# chungMD
+# Chung Collection Metadata Cleaning
 This repository contains the codes used for Chung Metadata Migration Project of RBSC at UBC Library during May to August, 2018. 
 
 ## Creator Cleaning
