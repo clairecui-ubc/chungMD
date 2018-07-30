@@ -1,9 +1,11 @@
 # Chung Metadata Migaration Project Report
 
 ## Table of Contents
-* [Background](#Background)
-* [Goals](#Goals)
-* [Major Tasks](#Major-Tasks)
+* [Background](#background)
+* [Goals](#goals)
+* [Major Tasks](#major-tasks)
+* [Methods](#methods)
+  * [Merge RBSC, DI and EX datasets]()
 ## Background
 UBC Rare Books and Special Collections (RBSC), UBC Library is working with Digital Initiatives at UBC library to decommission the current Chung database and move information to a complete system of record (AtoM software). The Chung collection is a major asset to UBC, and holds over 25, 000 items that document immigration and settlement to British Columbia, the Canadian Pacific Railway, and early exploration.  The collection is particularly rich in its documentation of the Canadian-Chinese diaspora.   RBSC is working with Digital Initiatives (DI) at UBC library to decommission the current Chung database and move information to a complete system of record (AtoM software). 
 Introduction on the dataset
