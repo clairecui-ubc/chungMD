@@ -11,7 +11,7 @@ The first step is to identify potential diffferent forms of the same creator. Du
 After a research on the creators name, we now have a list of old and new creators (`dict.csv`). We need to replace the creators' name in the Chung collection based on that dictionary. The detailed codes are in [/CreatorCleaning/UpdateCreators_0705.ipynb](/CreatorCleaning/UpdateCreators_0705.ipynb)
 
 ## Assign Start Dates and End Dates based on "Date Created"
-To index the dates in AtoM, the new metadata management system to be used for Chung Collection, the start date and end date need to be added before uploading the data into the system. The detailed codes are in [/date/startAndEndDate.ipynb](/date/startAndEndDate.ipynb) 
+To index the dates in AtoM, the new metadata management system to be used for Chung Collection, the start date and end date need to be added before uploading the data into the system. The detailed codes are in [/date/startAndEndDate.ipynb](/Date/startAndEndDate.ipynb) 
 
 
 
