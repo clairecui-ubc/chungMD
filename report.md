@@ -50,32 +50,24 @@ Among the 21 fields of RBSC dataset and 34 fields of DI, 20 of them are shared b
 |Physical Description|Extent|	
 
 ## Goals
-The goal of the project is to have a full list of current collections available for import into AtoM, the new metadata management system. This list should meet the following requirements by the end of the project:
-* The format of the data should comply with the current Canadian Rules of Description
+The goal of the project is to have a full list of current collections available for import into AtoM, the new metadata management system. The final list should be both easy to manage, as well as easy to access for users. To ensure that, this list should meet the following requirements by the end of the project:
+* ~~The format of the data should comply with the current Canadian Rules of Description~~
+### For easy access
+* A hirarchy was established for collection arrangement
 * The list should include all collections that have been described or received in the Chung Collection, though gaps may still exist for missing items
 * The list need to ensure that all description information for the items are correct, including
-  * No discrepancy between RBSC and DI dataset on fields to import to AtoM (Access Identifier, Title, Alternative Title, Location, Notes, Creator, Description, Date Created, Date Issued, Language, Physical Description)
+  * All discrepancies between RBSC and DI dataset on fields to import to AtoM are checked (Access Identifier, Title, Alternative Title, Location, Notes, Creator, Description, Date Created, Date Issued, Language, Physical Description)
   * Locations are correctly assigned for existing items, which means all items should be assigned a location. If the item is found missing, the location field should be indicated as “missing”, while the original location should be recorded in “Staff_Notes” field.
   * The information described the items should keep consistent all the way, i.e. use the same format and for the same attribute, and the same name for the same entity (e.g. creators)
-* The list should assign an Access Identifier for each item as the single identifier for future management, i.e. 
+* The dates are indexed and could be searched on date range in Advanced Search in AtoM
+### For easy administration
+* Each item should be assigned an unique Access Identifier, i.e. 
   * There are no duplicated identifiers
-  * New items could be easily assigned and Access Identifier in compliance with the current format
+  * New items could be easily assigned and Access Identifier in compliance with the current format, which means there should be enough reserved numbers for future records
 * The list should be easy to maintain even if the administrator changed, i.e.
   * The list is in a easy to manipulate format
+  * The Master List is mapped to the AtoM CSV Template, so that information in the Master List and AtoM always keep consistent and updated
   * Current management rules should be written down
-
-## Major Tasks
-* Merge RBSC and DI spreadsheets
-  * Remove duplicates
-  * Identify gaps, missing items (eg. skipped identifiers)
-    * Krisztina: Issue of missing items from the drupel database that are not represented in the CSV export from Drupel
-  * Fix mismatched fields
-  * Decide metadata fields to keep
-* Modify current dates to RAD compliant dates
-  * Add start and end dates in new master spreadsheet to enable date range search in AtoM
-* Assign the three major themes (Canadian Pacific Railway Company, Immigration and Settlement, Early British Columbia History) to every item
-  * Krisztina: Please think about how to manage the large amount of data going into AtoM in a way that will enhance the user experience.   Is it practical to do it this way?  Should we attempt to identify sub-series, or at this stage is it better to stick to the three themes?  
-* Identify and assign location to items currently without one
 
 ## Methods
 
@@ -193,3 +185,16 @@ With the cleaned list, I used python programming to replace the updated list, wh
 ## Appendix
 ### Update Logs
 See “T:\RBSC\PE files (staff files)\PE Claire Cui\Merged datasets\000_UpdateLog.xlsx”
+
+### Major Tasks
+* Merge RBSC and DI spreadsheets
+  * Remove duplicates
+  * Identify gaps, missing items (eg. skipped identifiers)
+    * Krisztina: Issue of missing items from the drupel database that are not represented in the CSV export from Drupel
+  * Fix mismatched fields
+  * Decide metadata fields to keep
+* Modify current dates to RAD compliant dates
+  * Add start and end dates in new master spreadsheet to enable date range search in AtoM
+* Assign the three major themes (Canadian Pacific Railway Company, Immigration and Settlement, Early British Columbia History) to every item
+  * Krisztina: Please think about how to manage the large amount of data going into AtoM in a way that will enhance the user experience.   Is it practical to do it this way?  Should we attempt to identify sub-series, or at this stage is it better to stick to the three themes?  
+* Identify and assign location to items currently without one
