@@ -1,5 +1,4 @@
 # Chung Metadata Migaration Project Report
-Updated?
 
 ## Table of Contents
 * [Background](#background)
