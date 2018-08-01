@@ -129,10 +129,6 @@ With the cleaned list, I used python programming to replace the updated list, wh
 * 
 
 ## Outcomes
-### In spreadsheet
-* No duplicated identifiers
-* Identified skipped locations
-* Identified skipped identifiers of artifacts (CC-AR), photos (CC-PH, not include photo albums), CC-GR and CC-OS.
 
 ### Collection Arrangement
 * Collection: Chung Collection
@@ -156,18 +152,30 @@ With the cleaned list, I used python programming to replace the updated list, wh
   * Series: Canadian transportation
 
 ### Major tasks finished
-- [x] A full list of metadata available: RBSC+DI
-- [x] Update identifiers: EX identifiers
-- [x] Duplicates removed:
-- [x] Library items removed: 
-- [x] RBSC and DI discrepancies checked: Title, Location, Date, Description, Notes, Physical description
-- [x] Album/photo links established using parentID field.
-- [x] Assign unique categories for all records
-- [x] Add skipped identifiers
-- [x] Creators Cleaning:  unify different forms of creators; match with AtoM authority list (except for CPR related creators)
-- [x] Add new columns and fill in information: GMD, level of description, start date and end date, language_CSV
-- [x] Add columns to mark changes: Status, Notes_Merging_CC, RBSC_Staff_Notes
-- [x] Keep logs: master daily backup, Updates Log, Co-op work log
+- [x] A full list of metadata available
+  - [x] Include all records from RBSC (from Drupal, the decommissioned database), DI and Newly added Exhibition items
+  - [x] Duplicates removed
+  - [x] Library items removed
+  - [x] Gaps identified: added skipped identifiers
+  - [ ] __*Possible Drupal export gap (not finished)*__
+- [x] Archival descriptions are consistant, including
+  - [x] Identifiers are updated, including EX identifiers and misassigned identifiers
+  - [x] RBSC and DI discrepancies checked: Title, Location, Date, Description, Notes, Physical description
+  - [x] Creators Cleaning:  Unify different forms of creators
+- [x] The format of the data complied with AtoM import requirements
+  - [x] Addded General Material Designation for all records based in identifier, genre and description. This field was added because the physical descriptions are not available for all records
+  - [x] Added level of description, including collection, series, subseries, file and item
+  - [x] Added `start date` and `end date` for all records
+  - [x] Added `language_CSV` in the format of ISO-639-1
+- [x] Establish hirarchy of items in the collection
+  - [x] Created a hirarchy based on current categories
+  - [x] Assign one unique category for each record
+  - [x] Established album/photo links using parentID field.
+- [x] Kept documentation and records of changes and decisions made to the Chung Metadata
+  - [x] Added columns in the master spreadsheet to mark changes: Status, Notes_Merging_CC, RBSC_Staff_Notes
+  - [x] Keep logs: master daily backup, Updates Log, Co-op work log
+  - [ ] Documentation: report, work flow, follow up tasks, policies and procedures, etc.
+
 
 ## Range of Access Identifiers
 * Artefacts: CC-AR-00001~CC-AR-00787
