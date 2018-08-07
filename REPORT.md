@@ -150,6 +150,7 @@ With the cleaned list, I used python programming to replace the updated list, wh
     * Subseries: Working for the C.P.R.
     * Subseries: Esquimalt and Nanaimo Railway Company
   * Series: Canadian transportation
+  * Series: Chung Collection promotional material and memorabilia
 
 ### Major tasks finished
 - [x] A full list of metadata available
