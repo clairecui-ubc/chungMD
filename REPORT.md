@@ -10,7 +10,8 @@
   - [ ] [Check mismatched RBSC and DI columns](#check-mismatched-rbsc-and-di-columns)
   - [ ] [Identify possible gaps](#identify-possible-gaps)
   - [ ] [Check Data Integrity](#check-data-integrity)
-  - [ ] [Creators Cleaning](##creators-cleaning)
+  - [ ] [Creators Cleaning](#creators-cleaning)
+  - [ ] [CSV Import](#csv-import)
 * [Outcomes](#outcomes)
 * [Range of Access Identifiers](#range-of-access-identifiers)
 * [Appendix](#appendix)
@@ -127,6 +128,8 @@ With the cleaned list, I used python programming to replace the updated list, wh
 #### The outcome of this step would include:
 * An authority list contains all creators in Chung collection, based on the CSV template provided by Artefactual
 * 
+
+### CSV Import
 
 ## Outcomes
 
