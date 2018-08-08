@@ -127,12 +127,73 @@ With the cleaned list, I used python programming to replace the updated list, wh
 
 #### The outcome of this step would include:
 * An authority list contains all creators in Chung collection, based on the CSV template provided by Artefactual
-* 
+* A dictionary of all pairs of old and updated creators in Chung collection
+* The frequency of each creator appeared in the Chung collection
 
 ### CSV Import
+After the previous steps for data cleaning for Chung Collection Metadata were done, we created CSV import files for AtoM upload. We reference the [CSV Import steps from Artefactual AtoM 2.4 documentation documentation](https://www.accesstomemory.org/en/docs/2.4/user-manual/import-export/csv-import/#csv-import), and map the data to the template. Based on the Chung Metadata, the fields are mapped based on the following relationship:
+Field Name|CSV Template|AtoM Field
+----|---------|-------
+ID| |		
+RBSC_ID| |		
+Status|	|
+legacyID|legacyID|	
+parentID|parentID|	
+Access Identifier|identifier|Identifier
+Digital Identifier|alternativeIdentifiers and alternativeIdentifierLabels|Add alternative identifier(s)
+Title|title|Title proper
+Alternative Title|alternateTitle|Parallel title
+GeneralMaterialDesignation|radGeneralMaterialDesignation|General material designation
+Location|physicalObjectName|Physical Storage (Appeared on right column)
+Date Created|eventDates and eventTypes|Date
+eventStartDates|eventStartDates|Dates of creation - Start
+eventEndDates|eventEndDates|Dates of creation - End
+Date Issued|	
+Sort Date|	
+Notes|generalNote|Other notes - General note
+NEW_Creator|eventActors	Creator
+RBSC_Creator|		
+Description|scopeAndContent|Scope and content
+Physical_Description|extentAndMedium|Physical description
+Publisher Original|radTitleProperOfPublishersSeries|Title proper of publisher’s series
+Publisher|
+Subject|[subjectAccessPoints?]	
+Subject - Geographic|		
+NEW_Category|*Used for Series Classification*	
+RBSC_Category|		
+Personal Names|[nameAccessPoints?]	
+RBSC_Genre|[genreAccessPoints?]	
+DI_Genre|		
+language_CSV|language|Language of material
+Language|
+levelOfDescription|levelOfDescription|Level of description
+RBSC_Staff_Notes|		
+Notes_Merging_CC|		
+
+The master dataset was broken into several files based on series and subseries to reduce the risk of uploading failure. During the first upload, only records marked "Ready" for the "Status" were uploaded. The first upload happened on August 8 to August 9, 2018. 19658 records were uploaded in total.
+
+ID|Series/Subseries|SeriesCount
+---|----|----
+1_1|Chinese immigration and settlement to Canada|1581
+1_2|The Yip family and Yip Sang Company|1178
+1_3|Cheekungtong (Chinese Freemasons)|30
+1_4|Clandonald and Scottish immigration to Canada|258
+2_1|Early British Columbia History|1883
+2_2|Early Canadian History|5
+3_1|Canadian Pacific Railway|2310
+3_2|C.P.R. steamships|5292
+3_3|Travel and tourism on the C.P.R.|5446
+3_4|British Columbia Coast Steamship Service|766
+3_5|Artwork and images of the C.P.R.|340
+3_6|C.P.R. artefacts|371
+3_7|Working for the C.P.R.|76
+3_8|Esquimalt and Nanaimo Railway Company|100
+4|Canadian Transportation|4
+5|Chung Collection promotional material and memorabilia|18
+|Grand Total| |19658
+
 
 ## Outcomes
-
 ### Collection Arrangement
 * Collection: Chung Collection
   * Series: Immigration and Settlement
