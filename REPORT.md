@@ -133,13 +133,13 @@ With the cleaned list, I used python programming to replace the updated list, wh
 ### Collection Arrangement
 * Collection: Chung Collection
   * Series: Immigration and Settlement
-    * Subseries: Chinese immigration and settlement to Canada (Chung Categories: “The Asian Experience in North America” and “Images of Chinese People and Communities in North America”)
+    * Subseries: Chinese immigration and settlement to Canada (Old Chung Categories: “The Asian Experience in North America” and “Images of Chinese People and Communities in North America”)
     * Subseries: The Yip Family and Yip Sang Company
     * Subseries: Chinese Freemasons (Cheekungtong)
     * Subseries: Clandonald and Scottish immigration to Canada
   * Series: Early British Columbia and Canadian History 
-    * Subseries: Early British Columbia History (Chung Category: British Columbia historical documents, photographs and artifacts)
-    * Subseries: Early Canadian History
+    * Subseries: Early British Columbia History (Old Chung Category: British Columbia historical documents, photographs and artifacts)
+    * Subseries: Early Canadian History (Newly added)
   * Series: Canadian Pacific Railway Company
     * Subseries: Canadian Pacific Railway
     * Subseries: C.P.R. steamships
@@ -149,8 +149,8 @@ With the cleaned list, I used python programming to replace the updated list, wh
     * Subseries: C.P.R. artefacts
     * Subseries: Working for the C.P.R.
     * Subseries: Esquimalt and Nanaimo Railway Company
-  * Series: Canadian transportation
-  * Series: Chung Collection promotional material and memorabilia
+  * Series: Canadian transportation (Newly added)
+  * Series: Chung Collection promotional material and memorabilia (Newly added)
 
 ### Major tasks finished
 - [x] A full list of metadata available
@@ -176,6 +176,12 @@ With the cleaned list, I used python programming to replace the updated list, wh
   - [x] Added columns in the master spreadsheet to mark changes: Status, Notes_Merging_CC, RBSC_Staff_Notes
   - [x] Keep logs: master daily backup, Updates Log, Co-op work log
   - [ ] Documentation: report, work flow, follow up tasks, policies and procedures, etc.
+
+### Major Updates
+*  Identifiers updated because of mismatching of the item and corresponding metadata. The update records is located in Update_logs.xlsx. Before update any related information in other related database, such as DI dataset, it should be start with identifier updates.
+*  Updated identifiers, archival descriptions and added new records for items in Chung Exhibition room.
+*  Creators cleaned, except for Canadian Pacific Railway Company related creators.
+*  Added skipped identifiers
 
 
 ## Range of Access Identifiers
@@ -206,3 +212,4 @@ See “T:\RBSC\PE files (staff files)\PE Claire Cui\Merged datasets\000_UpdateLo
 * Assign the three major themes (Canadian Pacific Railway Company, Immigration and Settlement, Early British Columbia History) to every item
   * Krisztina: Please think about how to manage the large amount of data going into AtoM in a way that will enhance the user experience.   Is it practical to do it this way?  Should we attempt to identify sub-series, or at this stage is it better to stick to the three themes?  
 * Identify and assign location to items currently without one
+
