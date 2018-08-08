@@ -72,8 +72,33 @@ The goal of the project is to have a full list of current collections available 
 ## Methods
 
 ### Merge RBSC, DI and EX datasets
-The original RBSC dataset has 19875 records, and the DI dataset has 19023 records. I updated some of the identifiers based on the exhibition items list file. After a full join on the two datasets, 19981 records
-See “T:\RBSC\PE files (staff files)\PE Claire Cui\Merged datasets\2018-05-17_MergingMethod.docx”
+(Detailed steps and more information in "2018-05-17_MergingMethod.docx")
+
+The original RBSC dataset has 19875 records, and the DI dataset has 19023 records. I updated some of the identifiers based on the exhibition items list file. After a full join on the two datasets, 19981 records were in the dataset in total. Full join will keep all records in both RBSC and DI dataset. All columns in both datasets will also be kept and showed in the query. 
+
+Another 37 records from the Chung Exhibition Room list were also added to the master dataset.
+
+After verify the physical records of gaps existing for RBSC and DI datasets, the metadata information of those gaps were copied from DI dataset.
+
+
+Date|Actions on dataset|Total Before|Change|Total After|Subset Before|Subset after|Notes
+-|-|-|-|-|-|-|-
+2018-05-22|RBSC/DI Merge|19875/19023|-|19968|||
+2018-05-24|Add new PH-09370 Records|19968|+340|20308|1407|1747|
+2018-05-24|Mismatched Titles|20308|-4|20304|111|107|
+2018-05-24|Duplicates removed by CC|20304|-44|20260|80|36|
+2018-05-25|Library Items|20260|-35|20225|35|0|
+2018-05-25|Duplicates removed by JL|20225|-21|20204|36|15|
+2018-05-29|Add Ex Newly Added records|20204|+37|20241|0|37|EX Newly Added
+2018-05-29|Add CC-TX-267-10-5 which was found during the Box 261~277 audit|20241|+1|20242|0|1|Further Description Required
+2018-06-04|Add Items in Box 131|20242|+5|20247|0|5|
+2018-06-05|Add Skipped Identifiers in Box 1|20247|+14|20261|185|199|Newly added on June 5, 2018 by Claire Cui. Further description required.
+2018-06-05|Add Skipped Identifiers in Box 2~5|20261|+13|20274|149|162|Newly added on June 5, 2018 by Claire Cui. Further description required.
+2018-06-11|Add skipped identifiers in Box 6~59|20274|+19|20293|0|19|Newly added on June 11, 2018 by Claire Cui. 
+2018-06-12|Add draft records in current AtoM|20293|+9|20302|0|9|Newly added on June 12 from AtoM Draft
+
+### Identify possible gaps
+Some gaps are also identified during checking the metadata. Some of the identifiers are skipped. After checked the potential location of those skipped identifiers, some items were added to the master dataset. Those records were marked as "Draft", which means it requires further description, or "Skipped", which means the skipped identifier was not located in Chung Collection.
 
 ### Remove Duplicates
 Use Check Duplicated Wizard of Access, and “remove duplicates” function of Excel.
@@ -96,10 +121,10 @@ WHERE ( ([DI_Date Created]<>[RBSC_Date Created])
      
 After Claire C. pulled the list of mismatched columns, Jacky Lai decided what information to keep in the master database. The decisions have been recorded in folder “Mismatched DI and RBSC Columns”.
 
-### Identify possible gaps
-Through skipped identifiers and locations; audit number of items, etc.
+
 ### Check Data Integrity
 * Make notes of updates on the Master spreadsheet on column “Notes_Merging_CC”
+
 ### Creators Cleaning
 #### Find different forms of names of the same creator
 To create such a list, we need to ensure that the same entity use the same form of names, according to the requirements from RAD on authority records. For example, “Yip, Sang” and “Yip Sang” should all be “Yip, Sang”; “Steele & Co.”, “Steele & Company” and “Steele and Company” should all be “Steele and Company”. 
@@ -228,14 +253,14 @@ ID|Series/Subseries|SeriesCount
   - [x] RBSC and DI discrepancies checked: Title, Location, Date, Description, Notes, Physical description
   - [x] Creators Cleaning:  Unify different forms of creators
 - [x] The format of the data complied with AtoM import requirements
-  - [x] Addded General Material Designation for all records based in identifier, genre and description. This field was added because the physical descriptions are not available for all records
-  - [x] Added level of description, including collection, series, subseries, file and item
+  - [x] Addded `General Material Designation` for all records based on identifier, genre and description. This field was added because the physical descriptions are not available for all records
+  - [x] Added `level of description` for all records, including collection, series, subseries, file and item
   - [x] Added `start date` and `end date` for all records
-  - [x] Added `language_CSV` in the format of ISO-639-1
-- [x] Establish hirarchy of items in the collection
+  - [x] Added `language_CSV` in the format of ISO-639-1 to support CSV import
+- [x] Established hirarchy of items in the collection
   - [x] Created a hirarchy based on current categories
-  - [x] Assign one unique category for each record
-  - [x] Established album/photo links using parentID field.
+  - [x] Assigned one and only one category for each record
+  - [x] Established album/photo links using parentID field
 - [x] Kept documentation and records of changes and decisions made to the Chung Metadata
   - [x] Added columns in the master spreadsheet to mark changes: Status, Notes_Merging_CC, RBSC_Staff_Notes
   - [x] Keep logs: master daily backup, Updates Log, Co-op work log
