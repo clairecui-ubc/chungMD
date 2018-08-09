@@ -158,7 +158,7 @@ With the cleaned list, I used python programming to replace the updated list, wh
 ### CSV Import
 After the previous steps for data cleaning for Chung Collection Metadata were done, we created CSV import files for AtoM upload. We reference the [CSV Import steps from Artefactual AtoM 2.4 documentation documentation](https://www.accesstomemory.org/en/docs/2.4/user-manual/import-export/csv-import/#csv-import), and map the data to the template. Based on the Chung Metadata, the fields are mapped based on the following relationship:
 Field Name|CSV Template|AtoM Field
--|-|-
+----|----|----
 ID| |		
 RBSC_ID| |		
 Status|	|
@@ -173,27 +173,27 @@ Location|physicalObjectName|Physical Storage (Appeared on right column)
 Date Created|eventDates and eventTypes|Date
 eventStartDates|eventStartDates|Dates of creation - Start
 eventEndDates|eventEndDates|Dates of creation - End
-Date Issued|	
-Sort Date|	
+Date Issued| |	
+Sort Date|	|
 Notes|generalNote|Other notes - General note
-NEW_Creator|eventActors	Creator
-RBSC_Creator|		
+NEW_Creator|eventActors|Creator
+RBSC_Creator| |		
 Description|scopeAndContent|Scope and content
 Physical_Description|extentAndMedium|Physical description
 Publisher Original|radTitleProperOfPublishersSeries|Title proper of publisher’s series
-Publisher|
-Subject|[subjectAccessPoints?]	
-Subject - Geographic|		
-NEW_Category|*Used for Series Classification*	
-RBSC_Category|		
-Personal Names|[nameAccessPoints?]	
-RBSC_Genre|[genreAccessPoints?]	
-DI_Genre|		
+Publisher| |
+Subject|[subjectAccessPoints?]|	
+Subject - Geographic|		|
+NEW_Category|*Used for Series Classification*|	
+RBSC_Category|	|
+Personal Names|[nameAccessPoints?]|
+RBSC_Genre|[genreAccessPoints?]	|
+DI_Genre|		|
 language_CSV|language|Language of material
-Language|
+Language| |
 levelOfDescription|levelOfDescription|Level of description
-RBSC_Staff_Notes|		
-Notes_Merging_CC|		
+RBSC_Staff_Notes|	|	
+Notes_Merging_CC|	|	
 
 The master dataset was broken into several files based on series and subseries to reduce the risk of uploading failure. During the first upload, only records marked "Ready" for the "Status" were uploaded. The first upload happened on August 8 to August 9, 2018. 19658 records were uploaded in total.
 
