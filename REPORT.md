@@ -157,6 +157,7 @@ With the cleaned list, I used python programming to replace the updated list, wh
 
 ### CSV Import
 After the previous steps for data cleaning for Chung Collection Metadata were done, we created CSV import files for AtoM upload. We reference the [CSV Import steps from Artefactual AtoM 2.4 documentation documentation](https://www.accesstomemory.org/en/docs/2.4/user-manual/import-export/csv-import/#csv-import), and map the data to the template. Based on the Chung Metadata, the fields are mapped based on the following relationship:
+
 Field Name|CSV Template|AtoM Field
 ----|----|----
 ID| |		
