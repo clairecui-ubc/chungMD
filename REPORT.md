@@ -20,7 +20,7 @@
 UBC Rare Books and Special Collections (RBSC) of UBC Library is working with Digital Initiatives at UBC library to decommission the current Chung database and move information to a complete system of record (AtoM software). The Chung collection is a major asset to UBC, and holds over 25, 000 items that document immigration and settlement to British Columbia, the Canadian Pacific Railway, and early exploration. The collection is particularly rich in its documentation of the Canadian-Chinese diaspora. 
 ### Introduction on the dataset
 I was given two Excel Spreadsheet contains records of Chung collection respectively from RBSC and DI. RBSC dataset was exported from the Drupal database, which can be accessed online through chung.library.ubc.ca. The spreadsheet I received on May 14, 2018 has 19875 records, and 21 descriptive fields.
-
+![Figure 1 Chung Drupal Frontend Portal](/src/img/report-01-chung.png)
 The source repository of DI dataset is CONTENTdm. The data can be accessed online through open.library.ubc.ca. The spreadsheet I received on May 15, 2018 has 19023 records and 34 fields.
  
 
