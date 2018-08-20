@@ -86,18 +86,20 @@ Except for those issues, some other information need to be added to the master s
 
 
 ## Methods
+In this section, I briefly introduced the methods I used for data cleaning. I also included links to the more detailed steps and external tools in this section.
 
-
-
-### Merge RBSC, DI and EX datasets
+### Get a full list of Chung Collection - by merging RBSC, DI and EX datasets, and check skipped identifiers
 (Detailed steps and more information in "2018-05-17_MergingMethod.docx")
 
-The original RBSC dataset has 19875 records, and the DI dataset has 19023 records. I updated some of the identifiers based on the exhibition items list file. After a full join on the two datasets, 19981 records were in the dataset in total. Full join will keep all records in both RBSC and DI dataset. All columns in both datasets will also be kept and showed in the query. 
+The original RBSC dataset has 19875 records, and the DI dataset has 19023 records. I updated some of the identifiers based on the exhibition items list file. After a full join on the two datasets, 19981 records were in the dataset in total. The full join method will keep all records in both RBSC and DI dataset. All columns in both datasets will also be kept. 
 
-Another 37 records from the Chung Exhibition Room list were also added to the master dataset.
+Another 37 records from the Chung Exhibition Room list were newly added to the master dataset, marked as "EX newly added" in "Notes_Merging_CC"
 
 After verify the physical records of gaps existing for RBSC and DI datasets, the metadata information of those gaps were copied from DI dataset.
 
+Some of the identifiers are skipped as I checked the dataset. After checked the possible physical locations of those skipped identifiers, some items were found and added to the master dataset. Those records were marked as "Draft", which means it requires further description, or "Skipped", which means the item with the identifier was not found in its possible location.
+
+Table 2 is a detailed list of change in number of records.
 
 Date|Actions on dataset|Total Before|Change|Total After|Subset Before|Subset after|Notes
 -|-|-|-|-|-|-|-
@@ -115,8 +117,7 @@ Date|Actions on dataset|Total Before|Change|Total After|Subset Before|Subset aft
 2018-06-11|Add skipped identifiers in Box 6~59|20274|+19|20293|0|19|Newly added on June 11, 2018 by Claire Cui. 
 2018-06-12|Add draft records in current AtoM|20293|+9|20302|0|9|Newly added on June 12 from AtoM Draft
 
-### Identify possible gaps
-Some gaps are also identified during checking the metadata. Some of the identifiers are skipped. After checked the potential location of those skipped identifiers, some items were added to the master dataset. Those records were marked as "Draft", which means it requires further description, or "Skipped", which means the skipped identifier was not located in Chung Collection.
+
 
 ### Remove Duplicates
 Use Check Duplicated Wizard of Access, and “remove duplicates” function of Excel.
