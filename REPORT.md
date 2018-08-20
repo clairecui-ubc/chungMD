@@ -18,12 +18,12 @@
 
 ## Background
 UBC Rare Books and Special Collections (RBSC) of UBC Library is working with Digital Initiatives at UBC library to decommission the current Chung database and move information to a complete system of record (AtoM software). The Chung collection is a major asset to UBC, and holds over 25, 000 items that document immigration and settlement to British Columbia, the Canadian Pacific Railway, and early exploration. The collection is particularly rich in its documentation of the Canadian-Chinese diaspora. 
+
 ### Introduction on the dataset
 I was given two Excel Spreadsheet contains records of Chung collection respectively from RBSC and DI. RBSC dataset was exported from the Drupal database, which can be accessed online through chung.library.ubc.ca. The spreadsheet I received on May 14, 2018 has 19875 records, and 21 descriptive fields.
 ![Figure 1 Chung Drupal Frontend Portal](/src/img/report-01-chung.png)
 The source repository of DI dataset is CONTENTdm. The data can be accessed online through open.library.ubc.ca. The spreadsheet I received on May 15, 2018 has 19023 records and 34 fields.
- 
-
+![Figure 2 Open Collection Frontend Portal](/src/img/report-02-openCollection.png)
 Among the 21 fields of RBSC dataset and 34 fields of DI, 20 of them are shared by both datasets. Those fields are
 
 |RBSC|	DI	|Description|
@@ -47,12 +47,11 @@ Among the 21 fields of RBSC dataset and 34 fields of DI, 20 of them are shared b
 |Publisher	|Publisher|	
 |Publisher Original	|Publisher Original|
 |Personal Names	|Personal Names|
-|Physical Description|Extent|	
-
-## Goals
+|Physical Description|Extent|
+### Goals
 The goal of the project is to have a full list of current collections available for import into AtoM, the new metadata management system. The final list should be both easy to manage, as well as easy to access for users. To ensure that, this list should meet the following requirements by the end of the project:
 * ~~The format of the data should comply with the current Canadian Rules of Description~~
-### For easy access
+#### For easy access
 * A hirarchy was established for collection arrangement
 * The list should include all collections that have been described or received in the Chung Collection, though gaps may still exist for missing items
 * The list need to ensure that all description information for the items are correct, including
@@ -60,7 +59,7 @@ The goal of the project is to have a full list of current collections available 
   * Locations are correctly assigned for existing items, which means all items should be assigned a location. If the item is found missing, the location field should be indicated as “missing”, while the original location should be recorded in “Staff_Notes” field.
   * The information described the items should keep consistent all the way, i.e. use the same format and for the same attribute, and the same name for the same entity (e.g. creators)
 * The dates are indexed and could be searched on date range in Advanced Search in AtoM, which means startDate and endDate of an event in the form of YYYY-MM-DD should be added to the dataset.
-### For easy administration
+#### For easy administration
 * Each item should be assigned an unique Access Identifier, i.e. 
   * There are no duplicated identifiers
   * New items could be easily assigned and Access Identifier in compliance with the current format, which means there should be enough reserved numbers for future records
@@ -69,7 +68,26 @@ The goal of the project is to have a full list of current collections available 
   * The Master List is mapped to the AtoM CSV Template, so that information in the Master List and AtoM always keep consistent and updated
   * Current management rules should be written down
 
+
+### Issues identified in the dataset
+At the beginning of the project, I identified the following issues in the dataset:
+1. Nearly 1400 records have empty Access Identifiers field in the RBSC dataset
+2. Metadata for Chung Exhibition items not updated, including Access Identifiers, locations, etc.
+3. Duplicated Access Identifiers
+4. Discrepencies between RBSC dataset and DI dataset
+5. Different forms of names for the same creator
+6. Some non-English characters are not displayed correctly
+
+Except for those issues, some other information need to be added to the master spreadsheet, including:
+1. A way to establish hirarchy for the collection
+2. Start and end date based on the date of creation for indexing purpose
+3. An authority records list to avoid duplication in authority records
+4. Other fields that are useful to the users, including General Material Designation and Level of Description
+
+
 ## Methods
+
+
 
 ### Merge RBSC, DI and EX datasets
 (Detailed steps and more information in "2018-05-17_MergingMethod.docx")
@@ -243,6 +261,7 @@ ID|Series/Subseries|SeriesCount
   * Series: Chung Collection promotional material and memorabilia (Newly added)
 
 ### Major tasks finished
+After the data cleaning work, the following tasks were finished during the Chung Metadata Migration project:
 - [x] A full list of metadata available
   - [x] Include all records from RBSC (from Drupal, the decommissioned database), DI and Newly added Exhibition items
   - [x] Duplicates removed
@@ -253,7 +272,7 @@ ID|Series/Subseries|SeriesCount
   - [x] Identifiers are updated, including EX identifiers and misassigned identifiers
   - [x] RBSC and DI discrepancies checked: Title, Location, Date, Description, Notes, Physical description
   - [x] Creators Cleaning:  Unify different forms of creators
-- [x] The format of the data complied with AtoM import requirements
+- [x] Added information required for AtoM import and ensure the format of the data complied with AtoM import requirements
   - [x] Addded `General Material Designation` for all records based on identifier, genre and description. This field was added because the physical descriptions are not available for all records
   - [x] Added `level of description` for all records, including collection, series, subseries, file and item
   - [x] Added `start date` and `end date` for all records
@@ -266,6 +285,7 @@ ID|Series/Subseries|SeriesCount
   - [x] Added columns in the master spreadsheet to mark changes: Status, Notes_Merging_CC, RBSC_Staff_Notes
   - [x] Keep logs: master daily backup, Updates Log, Co-op work log
   - [ ] Documentation: report, work flow, follow up tasks, policies and procedures, etc.
+
 
 ### Major Updates
 *  Identifiers updated because of mismatching of the item and corresponding metadata. The update records is located in Update_logs.xlsx. Before update any related information in other related database, such as DI dataset, it should be start with identifier updates.
